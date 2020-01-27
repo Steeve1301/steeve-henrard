@@ -1,0 +1,270 @@
+
+h2{
+    font-size:1.7em;
+}
+h3{
+    font-size:1.2em;
+}
+body{
+    background-color:#222222;
+    padding:0;
+}
+header{
+    border-bottom:1px solid white;
+    background-image: url("img/banner.png");
+    background-size: cover;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    height:250px;
+
+}
+footer{
+    color:white;
+    border-top: 1px solid white;
+    background-color: #141414;
+    font-size:0.7em;
+    font-weight: bold;
+    padding:10px;
+    margin-top:50px;
+    margin-bottom:0;
+}
+.navme{
+    color:#FAFEF9;
+    & h1{
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+    }
+    & h4{
+        font-family: 'Indie Flower', cursive;
+        font-size:1.2em;
+    }
+}
+.about{
+    padding-top:30px;
+    background:#141414;
+    color:white;
+    height:300px;
+    margin-top:50px;
+    box-shadow: 0px 2px 2px white;
+
+}
+#skills{
+    margin-top:50px;
+    background:#141414;
+    color:white;
+    line-height: 4;
+    & img{
+        width:50%;
+    }
+    & h2{
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+    & ul{
+        font-size:3vw;
+        & li{
+
+            list-style-type: none;
+            &:before{
+                content: ' ';
+                display: inline-block;
+                vertical-align: middle;
+                width:36px;
+                height: 36px;
+                margin: 0px 16px 0px 4px;
+
+            }
+            &:first-child:before{
+                background-image: url("img/responsive.png");
+                background-size: cover;
+            }
+            &:nth-child(2):before{
+                background-image: url("img/think.png");
+                background-size: cover;
+            }
+            &:nth-child(3):before{
+                background-image: url("img/tools-and-utensils.png");
+                background-size: cover;
+            }
+            &:nth-child(4):before{
+                background-image: url("img/technical-support.png");
+                background-size: cover;
+            }
+            &:nth-child(5):before{
+                background-image: url("img/ui.png");
+                background-size: cover;
+            }
+
+        }
+    }
+
+}
+.lastcreat{
+    background:#141414;
+    color:white;
+    & h2{
+        padding:40px 0px 15px 0px;
+    }
+
+    & img{
+    width:250px;
+    border-radius: 30px;
+}
+}
+// Menu reponsive
+#menu, #menu-content{
+    display:inline;
+}
+
+#menu-content{
+    z-index: 20;
+    position: fixed;
+    color:white;
+    background-color:#2222227c;
+    width:100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid white;
+    & ul{
+        margin:0;
+    }
+    & ul li{
+        display:inline-flex;
+        margin-left:10px;
+        & a{
+            color:white;
+            text-transform: uppercase;
+            font-family: 'ZCOOL QingKe HuangYou', cursive;
+            font-weight: bold;
+            text-decoration: none;
+            &:hover{
+                color:rgba(69, 75, 102, 0.747);
+            }
+        }
+    }
+    
+}
+
+#menu-button{
+    display:none;
+    border:none;
+    cursor: pointer;
+    background:none;
+    font-size:30px;
+    float:left;
+    margin-left:30px;
+}
+#menu-overlay{
+    display:none;
+    position:fixed;
+    z-index:10;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.397);
+}
+
+#menu-sidebar{
+    position:fixed;
+    width:84%;
+    z-index:20;
+    height:100%;
+    top:0;
+    left:0;
+    background-color:#CBD3DB;
+    transform: translateX(-100%);
+    transition: transform .2s ease-out;
+    & li{
+        display:block;
+        & a{
+            color:#17183B;
+            font-size:1.7em;
+            font-family: 'ZCOOL QingKe HuangYou', cursive;
+        }
+    }
+}
+#menu-side-head{
+    background-image: url("img/bannernav.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:148px;
+}
+#menu-side-body{
+    padding: 16px 8px;
+    & li:before{
+        content: ' ';
+        display: inline-block;
+        vertical-align: middle;
+        width:24px;
+        height: 24px;
+        margin: 0px 16px 0px 4px;
+    }
+    & li:first-child:before{
+        background-image: url("img/home.svg");
+        background-size:cover;
+    }
+    & li:nth-child(2):before{
+        background-image: url("img/code.svg");
+        background-size: cover;
+    }
+    & li:nth-child(3):before{
+        background-image: url("img/code.svg");
+        background-size: cover;
+    }
+    & li:nth-child(4):before{
+        background-image: url("img/man.svg");
+        background-size: cover;
+    }
+    & li:nth-child(5):before{
+        background-image: url("img/contact.svg");
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width:1024px){
+
+    #menu-content{
+        display:none;
+    }
+
+    #menu-button, #menu-sidebar, .menu-activated #menu-overlay{
+        display:block;
+    }
+    .menu-activated #menu-sidebar{
+        transform: translateX(0);
+        
+    }
+}
+@media screen and (min-width:1024px){
+    header{
+        height:350px;
+        background-size: 100% 150%;
+    }
+    .lastcreat{
+        margin:0;
+        padding:0;
+        & img{
+            width:100%;
+        }
+    }
+    .about{
+        border-radius: 5px;
+        height:100%;
+        margin-left:5%;
+    }
+    #skills{
+        font-size:1.1em;
+        border-radius:5px;
+        & ul li{
+            font-size: 1.5vw;
+        }
+        & img{
+            width:50%;
+        }
+    }
+
+    .lastcreat{
+        margin-top:50px;
+        border-radius:5px;
+    }
+}

@@ -1,0 +1,54 @@
+@keyframes transit{
+    0%{
+        transform: translateX(-180%);
+    }
+    50%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(180%);
+    }
+}
+
+header{
+    background-image: url("img/maintenance.jpg");
+    background-size:cover;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    height:250px;
+    width:100%;
+}
+footer{
+    background-image: url("img/footmaintenance.jpg");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    height:500px;
+    width:100%;
+}
+.oups{
+    padding:70px;
+    background-color: rgba(212, 214, 200, 0.808);
+    border:1px solid white;
+    color:#0A122A;
+}
+
+@media screen and (min-width: 1024px){
+    header{
+        position: fixed;
+        background-size:cover;
+        background-position-y: center;
+    }
+    footer{
+        position: static;
+        height:900px;
+        background-size:cover;
+    }
+    .oups{
+        background-color: rgba(237, 240, 218, 0.644);
+        margin: 25% 25%;
+        padding:30px;
+        border-radius:6px;
+        text-align: center;
+        animation: transit 7s ease-in 2 reverse;
+    }
+}
